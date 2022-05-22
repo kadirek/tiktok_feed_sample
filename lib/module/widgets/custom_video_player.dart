@@ -19,6 +19,7 @@ class CustomVideoPlayer extends StatefulWidget {
 
 class _CustomVideoPlayerState extends State<CustomVideoPlayer> {
   late BetterPlayerController _videoPlayerController;
+  bool _isPlaying = true;
 
   @override
   void initState() {
@@ -60,10 +61,22 @@ class _CustomVideoPlayerState extends State<CustomVideoPlayer> {
     });
   }
 
+  changePlayStatus() {
+    setState(() {
+      _isPlaying = !_isPlaying;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return BetterPlayer(
-      controller: _videoPlayerController,
+    return GestureDetector(
+      onTap: () async {
+        _isPlaying ? await _videoPlayerController.pause() : await _videoPlayerController.play();
+        changePlayStatus();
+      },
+      child: BetterPlayer(
+        controller: _videoPlayerController,
+      ),
     );
   }
 }
