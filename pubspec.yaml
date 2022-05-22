@@ -1,0 +1,52 @@
+name: tiktok_feed_sample
+description: A new Flutter project.
+
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.1 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  #flutter
+  cupertino_icons: 1.0.4
+
+  #helper
+  sizer: 2.0.15
+  intl: 0.17.0
+  mask_input_formatter: 0.0.3
+  kartal: 2.3.1
+
+  #storage
+  shared_preferences: 2.0.13
+  
+  #state-management
+  provider: 6.0.2
+  flutter_mobx: 2.0.4
+
+  #svg
+  flutter_svg: 1.0.3
+
+  #request
+  vexana: 2.8.0
+
+  #widget
+  flutter_pin_code_widget: 0.0.4
+  pin_code_text_field: 1.8.0
+  better_player: 0.0.82
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: 1.0.4
+  build_runner: 2.1.10
+  json_serializable: 6.1.5
+  mobx_codegen: 2.0.5+2
+
+flutter:
+  uses-material-design: true
